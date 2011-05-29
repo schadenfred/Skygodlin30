@@ -11,7 +11,7 @@
       = render 'devise/menu/login_items'
     - flash.each do |name, msg|
       = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
-    / %p{:style => "color: green"}= notice
-    / %p{:style => "color: red"}= alert
+//    %p{:style => "color: green"}= notice
+//    %p{:style => "color: red"}= alert
     = yield
 

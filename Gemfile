@@ -11,13 +11,16 @@ gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'sqlite3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'therubyracer', :require => nil
 gem 'rake', '0.8.7'
 gem 'devise', '1.3.4'
 gem 'omniauth', '0.2.6'
 gem 'haml', '3.1.1'
 gem 'haml-rails', '0.3.4'
+gem 'friendly_id', :git => 'git://github.com/norman/friendly_id.git'
+gem 'mocha', '0.9.12'
+gem 'babosa', '0.3.4'
 
 group :test, :development do
   gem 'turn', :require => false
@@ -26,6 +29,7 @@ group :test, :development do
   gem 'capybara', ">= 0.4.1.2"
   gem 'database_cleaner', '>= 0.6.7'
   gem 'rspec-rails', '>= 2.6.1.beta1'
+  gem 'heroku'
 end
 
 # Use unicorn as the web server

@@ -1,0 +1,4 @@
+- if @subdomain.errors.any?
+  .error_explanation
+    %h2 #{pluralize(@subdomain.errors.count, "error")} prohibited this subdomain from being saved:
+

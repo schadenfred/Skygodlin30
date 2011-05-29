@@ -1,0 +1,17 @@
+- if @subdomain.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@subdomain.errors.count, "error")
+      prohibited this subdomain from being saved:
+    %ul
+      - @subdomain.errors.full_messages.each do |msg|
+        %li= msg
+= fields_for @subdomain do |f|
+  %div
+    = f.label :name
+    = f.text_field :name
+    = f.hidden_field (:user_id, :value => @subdomain.user_id)
+  %br/
+  .actions
+    = f.submit
+

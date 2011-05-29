@@ -4,7 +4,7 @@
   %p
     = f.label :name
     %br/
-    = f.text_field :name
+    = f.email_field :name
   %p
     = f.label :email
     %br/

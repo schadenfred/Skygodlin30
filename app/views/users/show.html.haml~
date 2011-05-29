@@ -1,0 +1,7 @@
+%h1= @user.name
+%p= @user.email
+%br/
+%p= link_to 'Edit', edit_user_registration_path
+%p= link_to 'List of Users', users_path
+%p User: #{@user.name}
+

@@ -1,0 +1,2 @@
+%h1 Sites#show
+%p Find me in app/views/sites/show.html.haml

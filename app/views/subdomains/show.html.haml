@@ -1,0 +1,5 @@
+%h1= @subdomain.name
+%p
+  Belongs to: #{link_to @subdomain.user.name, user_url(@subdomain.user)}
+= link_to 'Edit', edit_subdomain_path(@subdomain)
+
