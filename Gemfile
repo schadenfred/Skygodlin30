@@ -18,7 +18,7 @@ gem 'devise', '1.3.4'
 gem 'omniauth', '0.2.6'
 gem 'haml', '3.1.1'
 gem 'haml-rails', '0.3.4'
-gem 'friendly_id', :git => 'git://github.com/norman/friendly_id.git'
+gem 'friendly_id', '3.3.0.alpha1'
 gem 'mocha', '0.9.12'
 gem 'babosa', '0.3.4'
 
