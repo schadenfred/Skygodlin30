@@ -1,3 +1,7 @@
 %h1 Editing subdomain
-= form_for
+= form_for(@subdomain) do |f|
+  = render 'form'
+= link_to 'Show', @subdomain
+|
+\#{link_to @subdomain.user.name, user_path(@subdomain.user)}
 

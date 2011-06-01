@@ -1,2 +1,4 @@
-%h1 Sites#show
-%p Find me in app/views/sites/show.html.haml
+%h1 Site: #{@site.name}
+%p
+  Belongs to: #{link_to @site.user.name, user_url(@site.user)
+

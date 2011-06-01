@@ -4,4 +4,10 @@
 - else
   %li
     = link_to('Login', new_user_session_path)
+%li
+  User:
+  - if current_user
+    = current_user.name
+  - else
+    (not logged in)
 

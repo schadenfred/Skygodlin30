@@ -16,8 +16,8 @@ class SubdomainsController < ApplicationController
   end
 
   def new
-    @subdomain = Subdomain.new(:user => @user)
-    respond_with(@subdomain)
+  @subdomain = Subdomain.new(:user => @user)
+  respond_with(@subdomain)
   end
 
   def create
@@ -58,9 +58,7 @@ class SubdomainsController < ApplicationController
         @user = @subdomain.user
       end
       unless current_user == @user
-        redirect_to @user, :alert => "Are you logged in properly? You are
-                                      not allowed to create or change
-                                      someone else's subdomain."
+        redirect_to @user, :alert => "Are you logged in properly? You are not allowed to create or change someone else's subdomain."
       end
     end
 

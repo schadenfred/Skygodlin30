@@ -1,7 +1,18 @@
 %h1= @user.name
-%p= @user.email
+%p
+  Email: #{@user.email}
+= link_to 'Edit', edit_user_registration_path
+|
+\#{link_to 'List of Users', users_path}
+%h3
+  = @user.name
+  's Subdomains
+%table
+  - @user.subdomains.each do |subdomain|
+    %tr
+      %td= link_to subdomain.name, subdomain
+      %td= link_to 'Edit', edit_subdomain_path(subdomain)
+      %td= link_to 'Destroy', subdomain, :confirm => 'Are you sure?', :method => :delete
 %br/
-%p= link_to 'Edit', edit_user_registration_path
-%p= link_to 'List of Users', users_path
-%p User: #{@user.name}
+= link_to "Add New Subdomain", new_user_subdomain_path(@user)
 
